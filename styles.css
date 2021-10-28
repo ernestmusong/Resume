@@ -19,14 +19,17 @@ body{
     text-transform: uppercase;
 }
 .semi_bold{
+    text-decoration: none;
+    color: white;
     font-weight: 500;
     font-size: 16px;
 }
+ 
 .resume{
+    display: flex;
     width: 800px;
     height: auto;
     margin: 50px auto;
-    display: flex;
 }
 .resume .resume_left{
     width: 280px;
@@ -42,6 +45,7 @@ body{
 }
 .resume .resume_left .resume_content{
    padding: 0 25px;
+    
 }
 .resume .title{
     margin-bottom: 20px;
@@ -65,11 +69,14 @@ body{
     align-items: center;
     margin-bottom: 10px;
  }
+
  .resume .resume_left ul li:last-child{
      
     margin-bottom: 0px;
  }
  .resume .resume_left ul li .icon{
+     display: grid;
+     place-items: center;
      width: 35px;
      height:35px;
      background: #fff;
@@ -78,20 +85,23 @@ body{
      margin-right: 15px;
      font-size: 16px;
      position: relative;
+      
  }
  .resume .resume_left ul li .data{
     color: #f0f0f0;
+    
  }
  .resume .icon i, .resume .resume_right .resume_hobby ul li i{
      position: absolute;
      top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
+     left: 50%; 
+      transform: translate(-50%, -50%);
     }
 
     .resume .resume_left .resume_skills ul li{
         color: #f0f0f0;
         justify-content: space-between;
+
     }
 
     .resume .resume_left .resume_skills ul li .skill_name{
@@ -172,7 +182,7 @@ body{
         display: flex;
         justify-content: space-between;
     }
-    .resume .resume_right .resume_hobby ul li , .resume .icon i{
+    .resume .resume_right .resume_hobby ul li  {
        width: 80px;
        height: 80px;
        border: 2px solid #0bb5f4;
@@ -197,7 +207,64 @@ body{
        display: none;
     }
 
+    /* media queries */
+    @media (max-width: 768px) {
+        .resume{
+            flex-direction: column;
+           width: 100vw;
+           height: auto;
+           margin: 0 auto;
+           padding: 0;
+           align-items: center;
+       }
+
+       .resume .resume_left .resume_skills ul li{
+        padding-right: 1rem;
+        
+    }
+
+       .resume .resume_left, .resume .resume_right{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .resume .resume_left .resume_content, .resume .resume_right{
+        padding: 0 1rem; 
+        width: 100%;
+         
+     }
+
+     .resume .resume_right .resume_hobby ul li:before{
+       display: none;
+    }
+} 
+
+@media (max-width: 992px) {
+    .resume{
+        flex-direction: column;
+       width: 100vw;
+       height: auto;
+       margin: 0 auto;
+       padding: 0;
+       align-items: center;
+   }
+
+   .resume .resume_left, .resume .resume_right{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.resume .resume_left .resume_content, .resume .resume_right{
+    padding: 0 1rem;
+    width: 100%;
      
+ }
+
+ .resume .resume_right .resume_hobby ul li:before{
+   display: "";
+}
+} 
+    
     
          
         
