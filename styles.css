@@ -106,6 +106,7 @@ body{
 
     .resume .resume_left .resume_skills ul li .skill_name{
         width: 25%;
+        text-transform: capitalize;
     }
     .resume .resume_left .resume_skills ul li .skill_progress{
         width: 60%;
